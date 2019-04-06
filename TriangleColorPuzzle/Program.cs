@@ -153,13 +153,13 @@ namespace TriangleColorPuzzle
 
             // evaluate each piece
             // point 1 and point 2 == comparison values
-            color Point1 = SideAB.Dot1;
-            color Point2 = SideAC.Dot1;
+            color Point1 = SideBC.Dot1;
+            color Point2 = SideAB.Dot4;
             for (int index = 0; index < pieces.Count; index++)
             {
-                if (pieces[index].Dot1 == Point1 && pieces[index].Dot3 == Point2)
+                if (pieces[index].Dot1 == Point1 && pieces[index].Dot2 == Point2)
                 {
-                    cornerA.Add(new Tuple<Piece,color> (pieces[index],pieces[index].Dot2));
+                    cornerA.Add(new Tuple<Piece,color> (pieces[index],pieces[index].Dot3));
                 }
 
                 else if (pieces[index].Dot2 == Point1 && pieces[index].Dot3 == Point2)
