@@ -153,8 +153,8 @@ namespace TriangleColorPuzzle
 
             // evaluate each piece
             // point 1 and point 2 == comparison values
-            color Point1 = SideBC.Dot1;
-            color Point2 = SideAB.Dot4;
+            color Point1 = SideAC.Dot4;
+            color Point2 = SideBC.Dot4;
             for (int index = 0; index < pieces.Count; index++)
             {
                 if (pieces[index].Dot1 == Point1 && pieces[index].Dot2 == Point2)
